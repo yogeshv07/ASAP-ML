@@ -1,0 +1,11 @@
+﻿
+data/training_dataset.csv
+data/training_dataset_with_synthetic_negatives.csv
+
+node_modules/
+app/frontend/node_modules/
+
+venv/
+__pycache__/
+*.pyc
+
