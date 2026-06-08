@@ -2,6 +2,18 @@
 
 ASAP-ML is a production-style Python project for antibiotic susceptibility prediction, antibiogram generation, and antibiotic recommendation. It follows the workflow described in *Antibiotic Susceptibility and Antibiogram Prediction* and extends it with a recommendation engine that ranks safer antibiotic options from predicted resistance probabilities. The application layer is now a React frontend backed by a FastAPI service.
 
+## Project Screenshots
+
+<p align="center">
+  <img src="./screenshot/img1.jpeg" width="800"><br><br>
+  <img src="./screenshot/img2.jpeg" width="800"><br><br>
+  <img src="./screenshot/img3.jpeg" width="800"><br><br>
+  <img src="./screenshot/img4.jpeg" width="800"><br><br>
+  <img src="./screenshot/img5.jpeg" width="800"><br><br>
+  <img src="./screenshot/img6.jpeg" width="800">
+</p>
+
+
 ## Workflow
 
 1. Generate synthetic FASTA-style AMR gene sequences in `data/sequences.fasta`
@@ -97,18 +109,3 @@ npm run build
 ```
 
 After building, the FastAPI app can also serve the compiled frontend from `app/frontend/dist`.
-
-## Generated Outputs
-
-- FASTA data: `data/sequences.fasta`
-- Structured dataset: `data/dataset.csv`
-- Best models and vectorizers: `outputs/models/`
-- Evaluation tables: `outputs/results/`
-- Charts: `outputs/charts/`
-
-## Recommendation Rules
-
-- Probability `> 0.8` -> `Avoid ❌`
-- Probability `0.6 - 0.8` -> `Caution ⚠️`
-- Probability `< 0.6` -> `Recommended ✅`
-- MDR alert when 3 or more antibiotics have probability `> 0.8`
